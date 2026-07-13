@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Pierce John A. Vargas personal portfolio focused on design, photography, branding, and modern digital presentation."
+  />
+  <title>Pierce John A. Vargas | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-accent" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="#home" class="brand">
+        <span class="brand-mark">PJ</span>
+        <span class="brand-text">Pierce John Vargas</span>
+      </a>
+
+      <div class="nav-actions">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="siteNav"
+          aria-label="Open navigation menu"
+        >
+          Menu
+        </button>
+
+        <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#work">Work</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle theme-toggle-icon-button" type="button" aria-label="Switch theme">
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 2.75V5.25M12 18.75V21.25M21.25 12H18.75M5.25 12H2.75M18.54 5.46L16.77 7.23M7.23 16.77L5.46 18.54M18.54 18.54L16.77 16.77M7.23 7.23L5.46 5.46" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="theme-toggle-text">Theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Personal portfolio</p>
+          <h1 class="hero-title">
+            Life and Tech.
+            <span class="hero-emphasis">Minimal. Professional. Intentional.</span>
+          </h1>
+          <p class="hero-description">
+            I am Pierce John A. Vargas, building under the identity of Life and Tech:
+            a personal portfolio focused on design, photography, and modern digital presentation
+            with clarity and intention.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#work" class="btn btn-primary">View selected work</a>
+            <a href="#gallery" class="btn btn-secondary">Open gallery</a>
+            <!--
+            <a href="assets/docs/pierce-john-vargas-cv.pdf" class="btn btn-secondary" download>Download CV</a>
+          -->
+          </div>
+
+          <div class="hero-extension reveal">
+            <article class="hero-note">
+              <p class="panel-label">Overview</p>
+              <p class="hero-note-text">
+                Life and Tech is my personal creative direction for work that combines
+                modern presentation, visual clarity, and a disciplined professional finish.
+              </p>
+            </article>
+
+            <div class="hero-points">
+              <article class="hero-point">
+                <span class="hero-point-title">Design</span>
+                <p>Clean layouts, brand-led presentation, and modern visual structure.</p>
+              </article>
+
+              <article class="hero-point">
+                <span class="hero-point-title">Photography</span>
+                <p>Thoughtful images shaped by composition, atmosphere, and storytelling.</p>
+              </article>
+
+              <article class="hero-point">
+                <span class="hero-point-title">Digital Presence</span>
+                <p>Portfolio and web presentation designed to feel polished and professional.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal">
+          <figure class="profile-visual">
+            <img src="assets/profile/pierce-profile.jpg" alt="Portrait of Pierce John Vargas" />
+          </figure>
+
+          <div class="intro-card">
+            <p class="panel-label">Profile</p>
+            <h2>Life and Tech presented through a clean and professional visual direction.</h2>
+            <p>
+              My work combines visual taste, structure, and presentation to create work
+              that feels polished, focused, and easy to remember.
+            </p>
+          </div>
+
+          <div class="hero-facts">
+            <div class="fact-card">
+              <span class="fact-label">Focus</span>
+              <span class="fact-value">Design, branding, photography</span>
+            </div>
+            <div class="fact-card">
+              <span class="fact-label">Style</span>
+              <span class="fact-value">Minimal, modern, professional</span>
+            </div>
+            <div class="fact-card">
+              <span class="fact-label">Goal</span>
+              <span class="fact-value">Thoughtful and presentation-ready work</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container section-grid">
+        <div class="section-heading reveal">
+          <p class="section-label">About</p>
+          <h2 class="section-title">A personal site built around clarity, discipline, and strong visual taste.</h2>
+        </div>
+
+        <div class="two-column-layout">
+          <article class="content-card reveal">
+            <p class="panel-label">Professional bio</p>
+            <p>
+              Pierce John A. Vargas is a creative professional developing work under the
+              identity of Life and Tech. His portfolio is centered on modern visual presentation,
+              thoughtful design, and polished digital communication.
+            </p>
+            <p>
+              His interests include design, photography, visual storytelling, and digital
+              presence. He values projects that are well-composed, purposeful, and refined in detail.
+            </p>
+            <p>
+              The overall direction of his work is minimal and professional, with an emphasis
+              on clarity, consistency, and a clean visual finish that can present both personality
+              and discipline.
+            </p>
+          </article>
+
+          <div class="summary-card reveal">
+            <p class="panel-label">Professional summary</p>
+            <div class="stat-grid">
+              <div class="stat-card">
+                <span class="stat-value">Minimal</span>
+                <span class="stat-copy">Simple layouts with balanced spacing and strong hierarchy.</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">Visual</span>
+                <span class="stat-copy">A clean point of view shaped by design and photography.</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">Professional</span>
+                <span class="stat-copy">Presentation-ready work with polish, structure, and consistency.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container section-grid">
+        <div class="section-heading reveal">
+          <p class="section-label">Skills and Tools</p>
+          <h2 class="section-title">A working toolkit built for visuals, storytelling, and digital presentation.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <p class="panel-label">01</p>
+            <h3>Design</h3>
+            <p>Creating polished layouts, identity studies, and presentation systems with a clear visual direction.</p>
+            <ul class="tool-tags">
+              <li>Canva</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+              <li>Figma</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="panel-label">02</p>
+            <h3>Photography</h3>
+            <p>Working with composition, subject framing, editing, and visual mood to create stronger storytelling.</p>
+            <ul class="tool-tags">
+              <li>Lightroom</li> 
+              <li>Adobe creative</li>
+              <li>Cinematics</li>
+              <li>Photography</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="panel-label">03</p>
+            <h3>Web Presentation</h3>
+            <p>Building clean websites and portfolio layouts that feel modern, responsive, and easy to navigate.</p>
+            <ul class="tool-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="panel-label">04</p>
+            <h3>Workflow</h3>
+            <p>Organizing projects, improving polish, and keeping creative work presentable from draft to final output.</p>
+            <ul class="tool-tags">
+              <li>VS Code</li>
+              <li>GitHub</li>
+              <li>Netlify</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="panel-label">05</p>
+            <h3>Administrative &amp; Office Support</h3>
+            <p>Skilled in organizing documents, preparing reports, managing records, creating daily work summaries, and assisting with professional application materials.</p>
+            <ul class="tool-tags">
+              <li>Excel</li>
+              <li>Office 365</li>
+              <li>Administrative Systems</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="container section-grid">
+        <div class="section-heading reveal">
+          <p class="section-label">Selected Work</p>
+          <h2 class="section-title">Browse featured projects and open full case-study style project pages.</h2>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card reveal">
+            <button
+              class="work-thumb-button"
+              type="button"
+              data-lightbox-src="assets/Placeholder1.png"
+              data-lightbox-alt="Website and systems development collection preview"
+              data-lightbox-caption="Website and systems development"
+            >
+              <img class="work-thumb" src="assets/Placeholder1.png" alt="Website and systems development collection preview" />
+            </button>
+            <span class="work-type">Website and Systems Development</span>
+            <h3>Website and systems development</h3>
+            <p>
+              A reserved collection for future websites, interface concepts, and system-focused digital builds.
+            </p>
+            <ul class="work-tags">
+              <li>Web</li>
+              <li>Systems</li>
+              <li>UI</li>
+            </ul>
+            <div class="work-actions">
+              <a href="projects/project-1.html" class="text-link">Open project page</a>
+              <button
+                class="text-link text-link-button"
+                type="button"
+                data-lightbox-src="assets/Placeholder1.png"
+                data-lightbox-alt="Website and systems development collection preview"
+                data-lightbox-caption="Website and systems development"
+              >
+                Preview image
+              </button>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <button
+              class="work-thumb-button"
+              type="button"
+              data-lightbox-src="assets/Placeholder2.png"
+              data-lightbox-alt="Visual archive collection preview"
+              data-lightbox-caption="Visual archive"
+            >
+              <img class="work-thumb" src="assets/Placeholder2.png" alt="Visual archive collection preview" />
+            </button>
+            <span class="work-type">Photography Collection</span>
+            <h3>Visual archive</h3>
+            <p>
+              A reserved collection for future photography work, curated image studies, and visual atmosphere pieces.
+            </p>
+            <ul class="work-tags">
+              <li>Photography</li>
+              <li>Composition</li>
+              <li>Storytelling</li>
+            </ul>
+            <div class="work-actions">
+              <a href="projects/project-2.html" class="text-link">Open project page</a>
+              <button
+                class="text-link text-link-button"
+                type="button"
+                data-lightbox-src="assets/Placeholder2.png"
+                data-lightbox-alt="Visual archive collection preview"
+                data-lightbox-caption="Visual archive"
+              >
+                Preview image
+              </button>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <button
+              class="work-thumb-button"
+              type="button"
+              data-lightbox-src="assets/Placeholder3.png"
+              data-lightbox-alt="Brand and layout exploration collection preview"
+              data-lightbox-caption="Brand and layout exploration"
+            >
+              <img class="work-thumb" src="assets/Placeholder3.png" alt="Brand and layout exploration collection preview" />
+            </button>
+            <span class="work-type">Identity Studies</span>
+            <h3>Brand and layout exploration</h3>
+            <p>
+              A grouped collection of logo design explorations, layout studies, and identity-led visual experiments.
+            </p>
+            <ul class="work-tags">
+              <li>Identity</li>
+              <li>Layout</li>
+              <li>Visual systems</li>
+            </ul>
+            <div class="work-actions">
+              <a href="projects/project-3.html" class="text-link">Open project page</a>
+              <button
+                class="text-link text-link-button"
+                type="button"
+                data-lightbox-src="assets/Placeholder3.png"
+                data-lightbox-alt="Brand and layout exploration collection preview"
+                data-lightbox-caption="Brand and layout exploration"
+              >
+                Preview image
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container section-grid">
+        <div class="section-heading reveal">
+          <p class="section-label">Gallery</p>
+          <h2 class="section-title">Open a dedicated gallery for each collection.</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <a class="gallery-item reveal" href="projects/project-1.html">
+            <img src="assets/projects/Web.png" alt="Website and systems development collection preview" />
+            <div class="gallery-copy">
+              <span class="gallery-label">Website and systems development</span>
+              <span class="gallery-link">Open project file</span>
+            </div>
+          </a>
+
+          <a class="gallery-item reveal" href="projects/project-2.html">
+            <img src="assets/projects/photo1.jpg" alt="Visual archive collection preview" />
+            <div class="gallery-copy">
+              <span class="gallery-label">Visual archive</span>
+              <span class="gallery-link">Open project file</span>
+            </div>
+          </a>
+
+          <a class="gallery-item reveal" href="projects/project-3.html">
+            <img src="assets/projects/project-3.jpg" alt="Brand and layout exploration collection preview" />
+            <div class="gallery-copy">
+              <span class="gallery-label">Brand and layout exploration</span>
+              <span class="gallery-link">Open project file</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-shell reveal">
+        <div class="contact-copy">
+          <p class="section-label">Contact</p>
+          <h2 class="contact-title">Open to creative opportunities and meaningful collaborations.</h2>
+          <p class="contact-description">
+            If you would like to work together or connect professionally, feel free to reach out.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <a href="mailto:vargaspiercejohn@gmail.com" class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <img src="assets/Email.png" alt="" />
+            </span>
+            <span class="contact-text">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">vargaspiercejohn@gmail.com</span>
+            </span>
+          </a>
+          <a href="https://www.facebook.com/PierceJohnv" target="_blank" rel="noreferrer" class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <img src="assets/facebook.png" alt="" />
+            </span>
+            <span class="contact-text">
+              <span class="contact-label">Facebook</span>
+              <span class="contact-value">PierceJohnv</span>
+            </span>
+          </a>
+          <a href="https://www.instagram.com/pjay.vargas/?hl=en" target="_blank" rel="noreferrer" class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <img src="assets/insta.png" alt="" />
+            </span>
+            <span class="contact-text">
+              <span class="contact-label">Instagram</span>
+              <span class="contact-value">@pjay.vargas</span>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/pierce-john-vargas-881123185" target="_blank" rel="noreferrer" class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <img src="assets/linkedin.png" alt="" />
+            </span>
+            <span class="contact-text">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">Pierce John Vargas</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="contact-actions">
+          <a href="mailto:vargaspiercejohn@gmail.com" class="btn btn-primary">Send an email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image preview">Close</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImage" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>Copyright <span id="currentYear">2026</span> Pierce John A. Vargas</p>
+      <a href="#home" class="footer-link">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

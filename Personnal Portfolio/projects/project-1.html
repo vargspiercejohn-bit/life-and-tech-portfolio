@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Gallery page for Pierce John Vargas website and systems development collection."
+  />
+  <title>Website and Systems Development | Pierce John Vargas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../project-detail.css" />
+</head>
+<body>
+  <div class="page-accent" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="../portfolio.html#home" class="brand">
+        <span class="brand-mark">PJ</span>
+        <span class="brand-text">Pierce John Vargas</span>
+      </a>
+
+      <div class="nav-actions">
+        <nav class="site-nav" aria-label="Project navigation">
+          <a href="../portfolio.html#gallery">Gallery</a>
+          <a href="../portfolio.html#work">Work</a>
+          <a href="../portfolio.html#contact">Contact</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle theme-toggle-icon-button" type="button" aria-label="Switch theme">
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 2.75V5.25M12 18.75V21.25M21.25 12H18.75M5.25 12H2.75M18.54 5.46L16.77 7.23M7.23 16.77L5.46 18.54M18.54 18.54L16.77 16.77M7.23 7.23L5.46 5.46" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="theme-toggle-text">Theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="detail-main">
+    <section class="detail-section">
+      <div class="container detail-gallery-header reveal">
+        <p class="section-label">Gallery</p>
+        <h1 class="detail-title">Website and systems development</h1>
+        <p class="detail-summary detail-summary-compact">
+          Reserved for future websites, system interfaces, and digital workflow builds.
+        </p>
+      </div>
+    </section>
+
+    <section class="detail-section detail-section-tight">
+      <div class="container detail-gallery-grid">
+        <!-- Add new gallery items below by copying one detail-gallery-button block and changing the image path, alt text, and caption. -->
+        <!--
+        TEMPLATE:
+        <button
+          class="detail-gallery-card reveal detail-gallery-button"
+          type="button"
+          data-lightbox-src="../assets/projects/your-image.jpg"
+          data-lightbox-alt="Describe the artwork"
+          data-lightbox-caption="Artwork title"
+        >
+          <img src="../assets/projects/your-image.jpg" alt="Describe the artwork" />
+          <h3>Artwork title</h3>
+        </button>
+        -->
+        <button
+          class="detail-gallery-card reveal detail-gallery-button"
+          type="button"
+          data-lightbox-src="../assets/projects/SLC.png"
+          data-lightbox-alt="Website and systems development collection preview"
+          data-lightbox-caption="Supply Ledger Card System"
+        >
+          <img src="../assets/projects/SLC.png" alt="Website and systems development collection preview" />
+          <h3>Supply Ledger Card System</h3>
+        </button>
+
+        
+
+        <button
+          class="detail-gallery-card reveal detail-gallery-button"
+          type="button"
+          data-lightbox-src="../assets/projects/web.png"
+          data-lightbox-alt="Website and systems development collection preview"
+          data-lightbox-caption="Supply Ledger Card System"
+        >
+          <img src="../assets/projects/Web.png" alt="Website and systems development collection preview" />
+          <h3>Portfolio Website</h3>
+        </button>
+
+
+        <article class="detail-gallery-card reveal detail-gallery-empty">
+          <div class="detail-placeholder">
+            <strong>Future system studies</strong>
+            <span>Keep workflow tools, interface prototypes, and system design variations grouped here.</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-section detail-section-tight">
+      <div class="container detail-nav-grid">
+        <a href="project-2.html" class="detail-nav-card">
+          <span>Next</span>
+          <strong>Visual archive</strong>
+        </a>
+        <a href="../portfolio.html#gallery" class="detail-nav-card">
+          <span>Return</span>
+          <strong>Back to gallery</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image preview">Close</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImage" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>Copyright <span id="currentYear">2026</span> Pierce John A. Vargas</p>
+      <a href="../portfolio.html#home" class="footer-link">Back to portfolio</a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

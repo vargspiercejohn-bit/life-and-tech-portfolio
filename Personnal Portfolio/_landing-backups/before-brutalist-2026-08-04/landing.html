@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Life and Tech, the personal portfolio of Pierce John Vargas."
+  />
+  <title>Life and Tech | Pierce John Vargas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="landing.css" />
+</head>
+<body class="landing-body">
+  <div class="landing-prelude" aria-hidden="true">
+    <div class="landing-prelude-inner">
+      <span class="landing-prelude-index">PJ / 01</span>
+      <p class="landing-prelude-title">Life <em>and</em> Tech</p>
+      <span class="landing-prelude-line"></span>
+    </div>
+  </div>
+
+  <div class="landing-ambient" aria-hidden="true">
+    <span class="landing-ambient-shape landing-ambient-shape-a"></span>
+    <span class="landing-ambient-shape landing-ambient-shape-b"></span>
+  </div>
+
+  <div class="landing-shell">
+    <header class="landing-header">
+      <a class="landing-brand" href="index.html" aria-label="Life and Tech homepage">
+        <span class="landing-brand-mark">PJ</span>
+        <span>Life and Tech</span>
+      </a>
+
+      <p class="landing-edition">Personal Portfolio / 2026</p>
+
+      <button
+        id="themeToggle"
+        class="theme-toggle theme-toggle-icon-button landing-theme"
+        type="button"
+        aria-label="Switch theme"
+      >
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 2.75V5.25M12 18.75V21.25M21.25 12H18.75M5.25 12H2.75M18.54 5.46L16.77 7.23M7.23 16.77L5.46 18.54M18.54 18.54L16.77 16.77M7.23 7.23L5.46 5.46" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="theme-toggle-text">Theme</span>
+      </button>
+    </header>
+
+    <main class="landing-main">
+      <section class="landing-hero" aria-labelledby="landingTitle">
+        <div class="landing-orbit" aria-hidden="true">
+          <span class="landing-orbit-ring landing-orbit-ring-outer"></span>
+          <span class="landing-orbit-ring landing-orbit-ring-inner"></span>
+          <span class="landing-orbit-dot"></span>
+          <span class="landing-orbit-copy">Life / Tech</span>
+        </div>
+
+        <div class="landing-intro">
+          <p class="landing-kicker">Pierce John Vargas</p>
+          <h1 class="landing-title" id="landingTitle">
+            <span>Ideas,</span>
+            <span>systems,</span>
+            <span>and stories.</span>
+          </h1>
+        </div>
+
+        <aside class="landing-side">
+          <p class="landing-side-label">Life and Tech</p>
+          <p class="landing-description">
+            A personal portfolio bringing together website development,
+            visual design, photography, and thoughtful digital presentation.
+          </p>
+
+          <div class="landing-disciplines" aria-label="Portfolio disciplines">
+            <span>Development</span>
+            <span>Design</span>
+            <span>Photography</span>
+          </div>
+
+          <a href="portfolio.html" class="btn btn-primary landing-enter">
+            Enter portfolio
+          </a>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="landing-footer">
+      <span>Philippines</span>
+      <span class="landing-footer-center">Minimal / Professional / Intentional</span>
+      <span class="landing-footer-right">Selected work</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="landing-motion.js"></script>
+</body>
+</html>

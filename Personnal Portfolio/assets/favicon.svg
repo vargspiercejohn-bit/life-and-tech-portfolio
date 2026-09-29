@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 208">
+  <style>
+    .mark { fill: #231f20; stroke: #231f20; }
+    @media (prefers-color-scheme: dark) {
+      .mark { fill: #f39b73; stroke: #f39b73; }
+    }
+  </style>
+  <g class="mark" transform="translate(0 3)" stroke-miterlimit="10">
+    <polygon points="116.45 175.9 16.26 175.9 16.26 50.68 41.3 25.63 41.3 150.86 91.39 150.86 116.45 175.9"/>
+    <polygon points="191.58 50.68 166.53 75.72 141.49 75.72 141.49 175.9 116.45 150.86 116.45 75.72 66.35 75.72 66.35 50.68 191.58 50.68"/>
+    <rect x="62.14" y="96.56" width="33.47" height="33.46"/>
+  </g>
+</svg>

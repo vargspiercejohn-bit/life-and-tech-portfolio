@@ -2,61 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" sizes="any" href="assets/favicon.svg?v=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Welcome landing page for Life and Tech by Pierce John Vargas."
+    content="Life and Tech, the personal portfolio of Pierce John Vargas."
   />
-  <title>Life and Tech | Welcome</title>
+  <title>Life and Tech | Pierce John Vargas</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="landing.css" />
+  <script src="studio-init.js?v=20260929-autoplay"></script>
+  <link rel="stylesheet" href="studio.css?v=20260929-logo" />
+  <link rel="stylesheet" href="studio-landing.css?v=20260928" />
 </head>
-<body class="landing-body">
-  <div class="landing-grid" aria-hidden="true"></div>
-  <div class="landing-glow landing-glow-a" aria-hidden="true"></div>
-  <div class="landing-glow landing-glow-b" aria-hidden="true"></div>
-  <div class="landing-glow landing-glow-c" aria-hidden="true"></div>
-
-  <main class="landing-main">
-    <div class="landing-stage">
-      <div class="landing-crest reveal is-visible" aria-hidden="true">PJ</div>
-      <span class="landing-chip reveal is-visible">Life and Tech</span>
-      <p class="landing-name reveal is-visible">Pierce John Vargas</p>
-
-      <h1 class="landing-title reveal is-visible">
-        A quiet digital space for
-        <span class="landing-type-line">
-          <span id="typedText" class="typed-text"></span>
-          <span class="typed-caret" aria-hidden="true"></span>
+<body class="landing-body brutal-landing">
+  <div class="brutal-page">
+    <header class="brutal-header">
+      <a class="brutal-brand" href="index.html" aria-label="Life and Tech homepage">
+        <span class="site-logo" role="img" aria-label="Life and Tech logo">
+          <img class="logo-light" src="assets/logo-mark-light.svg" alt="" width="46" height="40" />
+          <img class="logo-dark" src="assets/logo-mark-dark.svg" alt="" width="46" height="40" />
         </span>
-      </h1>
+        <span>Life.Tech</span>
+      </a>
 
-      <p class="landing-subtitle reveal is-visible">
-        Design, photography, and digital identity presented with restraint,
-        atmosphere, and a more refined visual rhythm.
-      </p>
+      <nav class="brutal-nav" aria-label="Portfolio navigation">
+        <a href="portfolio.html#about">About</a>
+        <a href="portfolio.html#skills">Skills</a>
+        <a href="portfolio.html#work">Work</a>
+        <a href="portfolio.html#contact">Contact</a>
+      </nav>
 
-      <div class="landing-actions reveal is-visible">
-        <a href="portfolio.html" class="btn btn-primary landing-cta">Enter Portfolio</a>
+      <div class="brutal-actions">
+        <button
+          id="themeToggle"
+          class="theme-toggle theme-toggle-icon-button brutal-theme"
+          type="button"
+          aria-label="Switch theme"
+        >
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 2.75V5.25M12 18.75V21.25M21.25 12H18.75M5.25 12H2.75M18.54 5.46L16.77 7.23M7.23 16.77L5.46 18.54M18.54 18.54L16.77 16.77M7.23 7.23L5.46 5.46" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="theme-toggle-text">Theme</span>
+        </button>
+
+        <a class="brutal-nav-cta" href="portfolio.html">Enter / 01</a>
       </div>
+    </header>
 
-      <div class="landing-signature reveal is-visible">
-        <span>Minimal</span>
-        <span>Refined</span>
-        <span>Intentional</span>
+    <main class="brutal-main">
+      <section class="brutal-hero" aria-labelledby="landingTitle">
+        <div class="brutal-system-row">
+          <span><i class="brutal-status-dot" aria-hidden="true"></i> Portfolio system online</span>
+          <span id="landingClock">00:00:00 PHT</span>
+        </div>
+
+        <h1 class="brutal-title" id="landingTitle">
+          <span>DESIGN. BUILD.</span>
+        </h1>
+
+        <div class="brutal-flow" role="img" aria-label="Creative workflow from ideas through web, systems, and visual design into a complete portfolio">
+          <span class="flow-line flow-line-a"></span>
+          <span class="flow-line flow-line-b"></span>
+          <span class="flow-line flow-line-c"></span>
+          <span class="flow-line flow-line-d"></span>
+          <span class="flow-line flow-line-e"></span>
+          <span class="flow-line flow-line-f"></span>
+
+          <span class="flow-node flow-node-input"><b>01</b> IDEAS</span>
+          <span class="flow-node flow-node-web"><b>02</b> WEB</span>
+          <span class="flow-node flow-node-systems"><b>03</b> SYSTEMS</span>
+          <span class="flow-node flow-node-visual"><b>04</b> VISUAL</span>
+          <span class="flow-node flow-node-output"><b>05</b> PORTFOLIO</span>
+        </div>
+
+        <h2 class="brutal-title brutal-title-bottom" aria-hidden="true">
+          <span class="brutal-glitch" data-text="PRESENT.">PRESENT.</span>
+        </h2>
+
+        <div class="brutal-hero-footer">
+          <p class="brutal-copy">
+            A working archive of websites, systems, visual identities, photography,
+            and professional support built by Pierce John Vargas.
+          </p>
+
+          <p class="brutal-terminal" aria-live="polite">
+            <span class="brutal-prompt">&gt;</span>
+            <span id="landingTypewriter"></span><span class="brutal-caret" aria-hidden="true">_</span>
+          </p>
+
+          <a class="brutal-enter" href="portfolio.html">
+            <span class="brutal-enter-icon" aria-hidden="true">-&gt;</span>
+            <span>Enter portfolio</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="brutal-marquee" aria-label="Portfolio capabilities">
+      <div class="brutal-marquee-track">
+        <span>Website Development</span><b>+</b>
+        <span>Systems</span><b>+</b>
+        <span>Visual Design</span><b>+</b>
+        <span>Photography</span><b>+</b>
+        <span>Office Support</span><b>+</b>
+        <span>Website Development</span><b>+</b>
+        <span>Systems</span><b>+</b>
+        <span>Visual Design</span><b>+</b>
+        <span>Photography</span><b>+</b>
+        <span>Office Support</span><b>+</b>
       </div>
     </div>
-  </main>
 
-  <script src="script.js"></script>
-  <script src="landing.js"></script>
+    <footer class="brutal-footer">
+      <span>Life and Tech / Personal Portfolio</span>
+      <span>Manila, Philippines</span>
+      <span>System version 02.06</span>
+    </footer>
+  </div>
+
+  <script src="studio.js?v=20260929-autoplay"></script>
 </body>
 </html>

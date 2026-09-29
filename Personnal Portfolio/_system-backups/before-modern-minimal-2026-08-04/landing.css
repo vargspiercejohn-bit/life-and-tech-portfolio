@@ -47,7 +47,6 @@
   color: var(--brutal-accent);
   font-size: 1rem;
   letter-spacing: -0.25em;
-  animation: brandSignal 1.8s steps(2, end) 1s infinite;
 }
 
 .brutal-nav {
@@ -190,9 +189,7 @@
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
   background-size: 24px 24px;
   overflow: hidden;
-  animation:
-    brutalMapIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both,
-    flowBreathe 4.8s ease-in-out 1.2s infinite;
+  animation: brutalMapIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
 
 .brutal-flow::before,
@@ -233,7 +230,7 @@
   letter-spacing: 0.08em;
   transform: translate(-50%, -50%);
   z-index: 3;
-  animation: brutalNodeIn 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: brutalNodeIn 0.01s linear both;
 }
 
 .flow-node b {
@@ -455,7 +452,6 @@
   color: #fff;
   font-size: 0.9rem;
   transition: transform 0.22s ease;
-  animation: enterSignal 2.8s ease-in-out 1.4s infinite;
 }
 
 .brutal-enter > span:last-child {
@@ -569,30 +565,8 @@
 }
 
 @keyframes brutalNodeIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -35%) scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@keyframes flowBreathe {
-  0%, 100% {
-    border-color: var(--heading);
-    box-shadow: 0 0 0 rgba(232, 93, 36, 0);
-  }
-  50% {
-    border-color: var(--brutal-accent);
-    box-shadow: 0 0 2rem rgba(232, 93, 36, 0.09);
-  }
-}
-
-@keyframes enterSignal {
-  0%, 100% { box-shadow: inset 0 0 0 rgba(255, 255, 255, 0); }
-  50% { box-shadow: inset 0 0 1.2rem rgba(255, 255, 255, 0.14); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes packetMove {
@@ -628,11 +602,6 @@
 @keyframes brutalMarquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
-}
-
-@keyframes brandSignal {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
 }
 
 @media (max-width: 900px) {
@@ -722,15 +691,21 @@
   }
 }
 
-.landing-body:not(.landing-motion-ready) .brutal-header,
-.landing-body:not(.landing-motion-ready) .brutal-system-row,
-.landing-body:not(.landing-motion-ready) .brutal-title > span,
-.landing-body:not(.landing-motion-ready) .brutal-glitch,
-.landing-body:not(.landing-motion-ready) .brutal-flow,
-.landing-body:not(.landing-motion-ready) .flow-node,
-.landing-body:not(.landing-motion-ready) .brutal-hero-footer,
-.landing-body:not(.landing-motion-ready) .brutal-status-dot,
-.landing-body:not(.landing-motion-ready) .brutal-enter-icon,
-.landing-body:not(.landing-motion-ready) .brutal-marquee-track {
-  animation-play-state: paused;
+@media (prefers-reduced-motion: reduce) {
+  .brutal-header,
+  .brutal-system-row,
+  .brutal-title > span,
+  .brutal-glitch,
+  .brutal-flow,
+  .flow-node,
+  .flow-line::after,
+  .brutal-flow::before,
+  .brutal-flow::after,
+  .flow-node::after,
+  .brutal-status-dot,
+  .brutal-hero-footer,
+  .brutal-caret,
+  .brutal-marquee-track {
+    animation: none !important;
+  }
 }

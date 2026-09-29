@@ -1,0 +1,641 @@
+.landing-body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.landing-prelude {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #111214;
+  color: #f7f2ea;
+  pointer-events: none;
+  z-index: 5000;
+  animation: preludeExit 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.45s forwards;
+}
+
+.landing-prelude-inner {
+  width: min(82vw, 620px);
+  display: grid;
+  gap: 1rem;
+}
+
+.landing-prelude-index {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: preludeFade 0.55s ease 0.15s both;
+}
+
+.landing-prelude-title {
+  font-size: clamp(2.8rem, 9vw, 6.8rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  overflow: hidden;
+  animation: preludeTitle 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+}
+
+.landing-prelude-title em {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+}
+
+.landing-prelude-line {
+  width: 100%;
+  height: 1px;
+  background: rgba(247, 242, 234, 0.4);
+  transform-origin: left;
+  animation: preludeLine 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.48s both;
+}
+
+.landing-ambient {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.landing-ambient-shape {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  filter: blur(18px);
+  opacity: 0.42;
+  will-change: transform;
+}
+
+.landing-ambient-shape-a {
+  width: min(52vw, 720px);
+  height: min(52vw, 720px);
+  top: -24%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0) 68%);
+  animation: ambientDriftA 15s ease-in-out infinite alternate;
+}
+
+.landing-ambient-shape-b {
+  width: min(42vw, 580px);
+  height: min(42vw, 580px);
+  bottom: -24%;
+  left: -9%;
+  background: radial-gradient(circle, rgba(178, 168, 151, 0.38), rgba(178, 168, 151, 0) 70%);
+  animation: ambientDriftB 18s ease-in-out infinite alternate;
+}
+
+body.light-mode .landing-ambient-shape-a {
+  background: radial-gradient(circle, rgba(118, 124, 134, 0.34), rgba(118, 124, 134, 0) 68%);
+}
+
+body.light-mode .landing-ambient-shape-b {
+  background: radial-gradient(circle, rgba(71, 76, 85, 0.46), rgba(71, 76, 85, 0) 70%);
+}
+
+.landing-shell {
+  --motion-x: 0px;
+  --motion-y: 0px;
+  --motion-x-reverse: 0px;
+  --motion-y-reverse: 0px;
+  --orbit-x: 0px;
+  --orbit-y: 0px;
+  width: min(1380px, calc(100% - 3rem));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.landing-header,
+.landing-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.landing-header {
+  border-bottom: 1px solid var(--line);
+  animation: landingFade 0.7s ease 1.5s both;
+}
+
+.landing-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  color: var(--heading);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.landing-brand-mark {
+  width: 2.35rem;
+  height: 2.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  font-size: 0.75rem;
+}
+
+.landing-edition {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.landing-theme {
+  justify-self: end;
+}
+
+.landing-main {
+  display: grid;
+  align-items: center;
+  padding: clamp(3rem, 8vh, 7rem) 0;
+}
+
+.landing-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(270px, 0.55fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: end;
+  isolation: isolate;
+}
+
+.landing-orbit {
+  position: absolute;
+  width: clamp(12rem, 22vw, 21rem);
+  aspect-ratio: 1;
+  top: -12%;
+  right: 2%;
+  opacity: 0;
+  transform: translate3d(
+    var(--orbit-x),
+    var(--orbit-y),
+    0
+  );
+  animation:
+    orbitReveal 1s ease 2.05s forwards,
+    orbitFloat 7s ease-in-out 3.1s infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.landing-orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
+.landing-orbit-ring-outer {
+  animation: orbitSpin 18s linear infinite;
+}
+
+.landing-orbit-ring-outer::before,
+.landing-orbit-ring-inner::before {
+  content: "";
+  position: absolute;
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 50%;
+  background: var(--heading);
+}
+
+.landing-orbit-ring-outer::before {
+  top: 10%;
+  right: 18%;
+}
+
+.landing-orbit-ring-inner {
+  inset: 22%;
+  border-style: dashed;
+  animation: orbitSpinReverse 13s linear infinite;
+}
+
+.landing-orbit-ring-inner::before {
+  bottom: -0.24rem;
+  left: calc(50% - 0.24rem);
+}
+
+.landing-orbit-dot {
+  position: absolute;
+  width: 1.15rem;
+  height: 1.15rem;
+  left: calc(50% - 0.575rem);
+  top: calc(50% - 0.575rem);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--heading);
+  box-shadow: 0 0 0 0 var(--accent-soft);
+  animation: orbitPulse 2.8s ease-in-out infinite;
+}
+
+.landing-orbit-copy {
+  position: absolute;
+  left: 50%;
+  bottom: 9%;
+  transform: translateX(-50%);
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.landing-intro {
+  min-width: 0;
+  transform: translate3d(var(--motion-x), var(--motion-y), 0);
+  transition: transform 0.2s ease-out;
+}
+
+.landing-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  animation: landingRise 0.8s ease 1.58s both;
+}
+
+.landing-kicker::before {
+  content: "";
+  width: 3rem;
+  height: 1px;
+  background: var(--line);
+}
+
+.landing-title {
+  max-width: 12ch;
+  color: var(--heading);
+  font-size: clamp(4.2rem, 10vw, 9.4rem);
+  font-weight: 800;
+  line-height: 0.78;
+  letter-spacing: -0.085em;
+}
+
+.landing-title span {
+  display: block;
+  animation: landingRise 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.landing-title span:nth-child(1) {
+  animation-delay: 1.7s;
+}
+
+.landing-title span:nth-child(2) {
+  margin-left: 0.48em;
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-style: italic;
+  animation-delay: 1.82s;
+}
+
+.landing-title span:nth-child(3) {
+  animation-delay: 1.94s;
+}
+
+.landing-side {
+  display: grid;
+  gap: 2rem;
+  align-content: end;
+  padding-bottom: 0.35rem;
+  transform: translate3d(
+    var(--motion-x-reverse),
+    var(--motion-y-reverse),
+    0
+  );
+  animation: landingRiseSide 0.9s ease 2.08s both;
+  transition: transform 0.2s ease-out;
+}
+
+.landing-side-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.landing-description {
+  color: var(--text);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.85;
+}
+
+.landing-disciplines {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.landing-disciplines span {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: translateX(0);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.landing-disciplines span::after {
+  content: "+";
+  color: var(--heading);
+  transition: transform 0.25s ease;
+}
+
+.landing-disciplines span:hover {
+  color: var(--heading);
+  transform: translateX(0.35rem);
+}
+
+.landing-disciplines span:hover::after {
+  transform: rotate(90deg);
+}
+
+.landing-enter {
+  min-width: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding-inline: 1.35rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.landing-enter::after {
+  content: "\2197";
+  font-size: 1rem;
+  transition: transform 0.28s ease;
+}
+
+.landing-enter:hover::after {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.landing-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  animation: landingFade 0.8s ease 2.25s both;
+}
+
+.landing-footer-center {
+  text-align: center;
+}
+
+.landing-footer-right {
+  text-align: right;
+}
+
+@keyframes landingRise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(7px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes landingFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes preludeFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes preludeTitle {
+  from {
+    opacity: 0;
+    transform: translateY(110%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes preludeLine {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes preludeExit {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 100% 0);
+    visibility: hidden;
+  }
+}
+
+@keyframes ambientDriftA {
+  from {
+    transform: translate3d(-4%, -2%, 0) scale(0.96);
+  }
+  to {
+    transform: translate3d(5%, 7%, 0) scale(1.08);
+  }
+}
+
+@keyframes ambientDriftB {
+  from {
+    transform: translate3d(-3%, 4%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(8%, -5%, 0) scale(1.12);
+  }
+}
+
+@keyframes orbitReveal {
+  from {
+    opacity: 0;
+    scale: 0.78;
+    rotate: -18deg;
+  }
+  to {
+    opacity: 0.5;
+    scale: 1;
+    rotate: 0deg;
+  }
+}
+
+@keyframes orbitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitSpinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes orbitFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -0.8rem;
+  }
+}
+
+@keyframes orbitPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--accent-soft);
+  }
+  50% {
+    box-shadow: 0 0 0 0.8rem transparent;
+  }
+}
+
+@keyframes landingRiseSide {
+  from {
+    opacity: 0;
+    translate: 0 30px;
+    filter: blur(7px);
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    filter: blur(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-shell {
+    width: min(100% - 2rem, 760px);
+  }
+
+  .landing-hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .landing-side {
+    max-width: 38rem;
+  }
+
+  .landing-title {
+    font-size: clamp(4rem, 17vw, 7.2rem);
+  }
+
+  .landing-orbit {
+    width: clamp(10rem, 32vw, 16rem);
+    top: 35%;
+    right: 4%;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing-header,
+  .landing-footer {
+    grid-template-columns: 1fr auto;
+  }
+
+  .landing-edition,
+  .landing-footer-center {
+    display: none;
+  }
+
+  .landing-main {
+    padding: 3.25rem 0;
+  }
+
+  .landing-title {
+    font-size: clamp(3.7rem, 18vw, 5.6rem);
+  }
+
+  .landing-title span:nth-child(2) {
+    margin-left: 0.25em;
+  }
+
+  .landing-orbit {
+    width: 11rem;
+    top: 43%;
+    right: -12%;
+    opacity: 0.32;
+  }
+
+  .landing-footer-right {
+    text-align: right;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-prelude {
+    display: none;
+  }
+
+  .landing-ambient-shape,
+  .landing-orbit,
+  .landing-orbit-ring,
+  .landing-orbit-dot {
+    animation: none !important;
+  }
+
+  .landing-orbit {
+    opacity: 0.35;
+  }
+
+  .landing-intro,
+  .landing-side {
+    transform: none !important;
+  }
+
+  .landing-header,
+  .landing-kicker,
+  .landing-title span,
+  .landing-side,
+  .landing-footer {
+    animation: none !important;
+  }
+}

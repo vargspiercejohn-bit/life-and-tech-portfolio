@@ -1,0 +1,136 @@
+.detail-main {
+  padding-top: 1.5rem;
+}
+
+.detail-section {
+  padding: 3rem 0;
+}
+
+.detail-section-tight {
+  padding-top: 0;
+}
+
+.detail-gallery-header,
+.detail-nav-grid,
+.detail-gallery-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.detail-gallery-header {
+  max-width: 44rem;
+}
+
+.detail-title {
+  color: var(--heading);
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+  margin: 0.9rem 0 1rem;
+}
+
+.detail-summary {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.detail-summary-compact {
+  max-width: 34rem;
+  font-size: 1.02rem;
+}
+
+.detail-gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.detail-gallery-card,
+.detail-nav-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.detail-gallery-card {
+  padding: 1rem;
+}
+
+.detail-gallery-button {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.detail-gallery-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+.detail-gallery-card h3 {
+  color: var(--heading);
+  font-size: 1rem;
+  margin-top: 0.9rem;
+  letter-spacing: -0.02em;
+}
+
+.detail-gallery-empty {
+  padding: 1rem;
+}
+
+.detail-placeholder {
+  min-height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 0.55rem;
+  min-height: 17rem;
+  padding: 1.4rem;
+  border: 1px dashed var(--line);
+  border-radius: 18px;
+  background: var(--surface-strong);
+}
+
+.detail-placeholder strong {
+  color: var(--heading);
+  font-size: 1rem;
+}
+
+.detail-placeholder span {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-nav-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.detail-nav-card {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.4rem 1.5rem;
+}
+
+.detail-nav-card span {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.detail-nav-card strong {
+  color: var(--heading);
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 960px) {
+  .detail-gallery-grid,
+  .detail-nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
